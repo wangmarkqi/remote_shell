@@ -1,0 +1,272 @@
+use 21risk
+pwd
+ls
+use 21risk
+ls
+pwd
+use 21risk
+ls
+pwd
+use 21risk
+ls
+pwd
+cd ..
+ls
+pwd
+ls
+cd /data
+ls
+use 21risk
+pwd
+cd /data/mypy
+ls
+use 21risk
+apt install gcc
+use test
+ls
+pwd
+python ./test/test.py
+kkk
+waite false
+use test
+waite false
+wait false
+use test
+wait false
+use test
+wait false
+python ./test/test.py
+use test
+dir
+wait false
+python ./test/test.py
+dir
+use test
+ls
+pwd
+wait false
+use test
+ls
+pwd
+wait false
+use test
+wait false
+use test
+ls
+pwd
+wait false
+python ./test/test.py
+use 21risk
+wait true
+use 21risk
+use test
+pwd
+python ./test/test.py
+wait false
+python ./test/test.py
+use test
+ls
+pwd
+wait false
+use test
+pwd
+wait false
+use test
+wait true
+python3 ./test/test.py
+use test
+ls
+wait false
+use test
+wait true
+python3 ./test/test.py
+apt update
+apt-get update
+apt
+use test
+ls
+wait false
+use test
+wait false
+use test
+ls
+wait false
+use test
+wait false
+use test
+ls
+wait false
+use test
+wait false
+use test
+wait false
+ls
+use test
+wait false
+ls
+use test
+wait false
+ls
+use test
+wait false
+ls
+use test
+ls
+wait false
+ls
+pwd
+ls
+pwd
+python3 ./test/test.py
+python ./test/test.py
+use test
+ls
+wait false
+ls
+pwd
+python3 ./test/test.py
+pwd
+python ./test/test.py
+wait true
+python3 ./test/test.py
+use test
+ls
+wait false
+ls
+python3 ./test/test.py
+wait true
+ls
+pwd
+python ./test/test.py
+python3 ./test/test.py
+ls
+pwd
+wait false
+python ./test/test.py
+ls
+python3 ./test/test.py
+use 21risk
+ls
+pwd
+cd /data/gobin
+ls
+cd ..
+ls
+pwd
+cd ..
+pwd
+cd gobin
+ls
+cd pass
+ls
+pwd
+ls
+pwd
+cd ..
+ls
+pwd
+ls
+wait false
+use 21risk
+ls
+pwd
+cd /data
+pwd
+ls
+pwd
+ls
+cd /data/gobin/remote_shell
+ls
+pwd
+ls
+pwd
+cd ..
+ls
+cd remote_shell
+ls
+pwd
+cd ..
+ls
+pwd
+cd ..
+pwd
+ls
+cd pass
+ls
+cd ..
+ls
+cd data
+ls
+pwd
+cd ..
+ls
+pwd
+cd ..
+pwd
+ls
+cd ..
+pwd
+ls
+pwd
+ps -ef | grep flutter
+wait false
+use test
+ls
+pwd
+cd ..
+ls
+cd pass_ball
+pwd
+ls
+cd ..
+ls
+cd ..
+ls
+pwd
+ls
+cd /mnt
+ls
+cd mygit
+ls
+pwd
+cd ..
+pwd
+ls
+cd mnt
+pwd
+cd ..
+ls
+cd ..
+pwd
+ls
+cd mnt
+pwd
+ls
+cd myrust
+ls
+cd ..
+cd mygit
+ls
+cd remote_shell
+ls
+use 21risk
+ls
+pwd
+cd ..
+ls
+pwd
+cd remote_shell
+ls
+cd ..
+ls
+pwd
+ls
+cd /data/gobin
+ls
+cd ..
+ls
+pwd
+wpd
+pwd
+ls
+pwd

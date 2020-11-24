@@ -1,0 +1,22 @@
+[package]
+name = "remote_shell"
+version = "0.2.4"
+authors = ["wangmarkqi <wangalexqi@126.com>"]
+edition = "2018"
+description = "remote shell written by rust."
+license = "MIT"
+homepage = "https://github.com/wangmarkqi/remote_shell.git"
+repository = "https://github.com/wangmarkqi/remote_shell.git"
+documentation = "https://github.com/wangmarkqi/remote_shell.git"
+
+
+[dependencies]
+anyhow="1.0.31"
+serde_derive = "1.0.90"
+serde_json = "1.0.39"
+serde = { version = "1.0.90", features = ["derive"] }
+hex="0.4"
+dotenv="0.15.0"
+system_shutdown = "3.0.0"
+reqwest = { version = "0.10", features = ["blocking", "json"] }
+crossterm = "0.18.0"
