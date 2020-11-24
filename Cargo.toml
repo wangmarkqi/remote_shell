@@ -9,7 +9,16 @@ homepage = "https://github.com/wangmarkqi/remote_shell.git"
 repository = "https://github.com/wangmarkqi/remote_shell.git"
 documentation = "https://github.com/wangmarkqi/remote_shell.git"
 
-
+[lib]
+name = "remote_shell"
+path = "src/lib.rs"
+[[bin]]
+name = "remote_shell"
+path = "src/bin.rs"
+#git branch --set-upstream-to=origin/master master
+#git checkout -b release-1.0
+#git checkout release-1.0
+#git checkout master
 [dependencies]
 anyhow="1.0.31"
 serde_derive = "1.0.90"
@@ -20,3 +29,5 @@ dotenv="0.15.0"
 system_shutdown = "3.0.0"
 reqwest = { version = "0.10", features = ["blocking", "json"] }
 crossterm = "0.18.0"
+#async-std = "1.6.2"
+#udp_hole_punching  = { git= "https://github.com/wangmarkqi/udp_hole_punching",version="2.0.1"}
