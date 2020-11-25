@@ -1,5 +1,4 @@
-pub mod process;
+pub mod cmd_process;
 pub mod shell;
-pub mod command;
-pub mod history;
-pub mod trans;
+pub mod shell_process;
+pub mod history_process;

@@ -270,3 +270,331 @@ wpd
 pwd
 ls
 pwd
+use wq
+pwd
+use wq
+where
+pwd
+ccccc
+
+use wq
+where
+use wq
+where
+ls
+
+use wq
+where
+pwd
+ls
+pwd
+where
+
+use wq
+where
+use wq
+ls
+pwd
+use wq
+where
+ls
+
+use wq
+where
+ls
+use wq
+where
+ls
+pwd
+use wq
+where
+ls
+
+use wq
+where
+ls
+use wq
+where
+ls
+
+use wq
+where
+ls
+pwd
+pwpwdpwduioyggjhg
+use wq
+where
+ls
+
+use wq
+where
+ls
+
+use wq
+where
+ls
+pwd
+use wq
+pwd
+ls
+cd ..
+pwd
+ls
+cd remote_shell
+pwd
+ls
+
+use wq
+where
+pwd
+ls
+cd ..
+ls
+use wq
+ls
+where
+use wq
+'
+pwd
+ls
+python3 ./data/test.py
+python ./data/test.py
+use wq
+where
+
+use wq
+where
+ls
+
+use wq
+where
+ls
+pwd
+ps -ef
+python3 ./data/test.py
+ls
+use wq
+where
+ls
+pwd
+where
+use wq
+where
+ls
+python3 ./data/test.py
+ls
+pwd
+
+use wq
+where
+pwd
+where
+ls
+where
+pwd
+
+use wq
+ls
+
+use wq
+ls
+pwd
+ls
+pwd
+
+use wq
+where
+ls
+pwd
+ls
+use wq
+where
+ls
+pwd
+ls
+use wq
+ls
+where
+a
+pwd
+ls
+pwd
+use wq
+where
+ls
+pwd
+python3 ./data/test.py
+use wq
+where
+ls
+pwd
+python3 ./data/test.py
+ls
+pwd
+use wq
+where
+use qw
+where
+use wq
+where
+ls
+pwd
+use wq
+where
+ls
+pwd
+ls
+pwd
+ls
+use wq
+where
+ls
+pwd
+use wq
+where
+ls
+pwd
+python ./data/test.py
+ls
+where
+use wq
+where
+ls
+pwd
+use wq
+where
+ls
+pwd
+ls
+use wq
+ls
+pwd
+python ./data/test.py
+use wq
+where
+ls
+pwd
+python3 ./data/test.py
+ls
+pwd
+cd ..
+ls
+pwd
+cd testgit
+ls
+cd ..
+ls
+cd remote_shell
+ls
+send ./data/test.py /home/a.py
+ls
+pwd
+cd /home
+ls
+cat a.py
+send ./data/test.py /home/a.py
+use wq
+where
+send ./data/test.py /home/a.py
+ls
+cd ..
+ls
+use wq
+where
+pwd
+ls
+cd /mnt
+use wq
+where
+ls
+pwd
+cd /mnt
+send ./data/test.py /home/a.py
+rec ./data/test.py D://a.py
+use wq
+where
+ls
+pwd
+use wq
+where
+ls
+rec ./data/test.py D://a.py
+send D://a.py ./data/test.py
+ls
+pwd
+ls
+pwd
+use wq
+ls
+use wq
+wher
+where
+ls
+pwd
+ls
+rec D://a.py /home/a.py
+ls
+use wq
+ls
+use wq
+where
+pwd
+use wq
+ls
+pwd
+rec D://a.py /home/a.py
+use wq
+where
+ls
+rec D://a.py /home/a.py
+ls
+pwd
+use wq
+ls
+send D:/kit.exe /home/kit.exe
+ls
+use wq
+pwd
+use wq
+pwd
+use wq
+ls
+use wq
+ls
+use wq
+where
+pwd
+send D://kit.exe /home/kit.exe
+ls
+use wq
+ls
+pwd
+use wq
+where
+use wq
+where
+pwd
+ls
+use wq
+ls
+use wq
+ls
+send D://kit.exe /home/a.exe
+use wq
+wher
+e
+ls
+send D://a.exe /home/b.exe
+ls
+use wq
+ls
+pes
+pwd
+where
+use wq
+where
+use wq
+where
+pwd
+ls
+send D://a.exe /home/b.exe

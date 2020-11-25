@@ -1,7 +1,7 @@
-use super::command::Command;
 use std::path::Path;
 use std::fs::{read_to_string, File, OpenOptions};
 use std::io::Write;
+use crate::host::shell_process::ShellProcess;
 
 pub trait History {
     fn save(&self) -> anyhow::Result<()>;
@@ -11,7 +11,7 @@ pub trait History {
     fn tab_complement(&self, input: &str) -> String;
 }
 
-impl History for Command {
+impl History for ShellProcess{
     fn save(&self) -> anyhow::Result<()> {
         let path = Path::new("./history.txt");
         let input = self.input.trim().replace("\n", "").replace("\r", "");
