@@ -1,33 +1,30 @@
 # remote_shell
-Remote shell run through pass_ball  written by rust. The use scenarios include iot device with no fixed ip, home computer behind local network, etc. with remote shell client side installed on slave machine, you can access from remote_shell host side like normal ssh process.
+Remote shell run through pass_ball  written by rust. The backend of remote_shell is a P2P framework upd_hole_punching (https://github.com/wangmarkqi/udp_hole_punching). The use scenarios include iot device with no fixed ip, home computer behind local network, etc. with remote shell client side installed on slave machine, you can access from remote_shell host side like normal ssh process.
 ![avatar](./data/demo.jpg)
 
 ## How to use:
 
-### step 1: Start pass_ball message queue:
 
-Git clone pass_ball(https://github.com/wangmarkqi/pass_ball) and run main.rs in server with public ip or any place accessible.  Revise  conf string in .env :
-```
-SLAVE_ID = yourid
-
-PASS_URL = http://192.168.177.1:8084
-
-```
-SLAVEID is id for slave, the slave only response for request which specified by 'use' command. 
-
-SLAVEID should not conflict with topics in pass msg queue,better use uuid as SLAVEID or any string you can sure will not duplicate.
-
-
-### step 2: Start slave 
+### step 1: Start slave 
 To use remote shell, 2 kinds of binary are needed to be build, the salve and the host. This step is for slave side. 
 Git clone remote_shell in slave machine and run slave::slave_dispatch::dispatch() in main.rs;
+```
+  let swap = "x.x.x.x:xxxx".to_string();
+  slave::slave_entrance::dispatch("wq", &swap,"./data/slave");
+
+```
 
 
-### step 3: Start host 
+### step 2: Start host 
 This step  is for host side. 
 Git clone remote_shell in host machine and run host::shell::run_shell()
+```
+    let swap = "x.x.x.x:xxxx".to_string();
+    host::shell::run_shell(&swap,"./data/master");
 
-### step 4: Stared with command "use"
+```
+
+### step 3: Stared with command "use"
  First specify slave id by "use <slave id which from step 2>" and send command as normal shell,like "cd /home" etc. 
 
 
