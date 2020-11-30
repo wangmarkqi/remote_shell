@@ -654,3 +654,31 @@ ls
 rec D://e.xlsx /home/f.xlsx
 ls
 rec D://wq.exe /home/e.exe
+use 21risk
+where
+ls
+pwd
+send D://a.exe /data/a.exe
+ls
+pwd
+use 21risk
+where
+ls
+cd /data
+ls
+rec D://risk.exe /data/a.exe
+use 21risk
+where
+ls
+pwd
+cd /data
+ls
+pwd
+cd /data/mypy
+ls
+pwd
+cd flutter_py
+ls
+cd ..
+ls
+pwd

@@ -1,5 +1,5 @@
 # remote_shell
-Remote shell run through pass_ball  written by rust. The backend of remote_shell is a P2P framework upd_hole_punching (https://github.com/wangmarkqi/udp_hole_punching). The use scenarios include iot device with no fixed ip, home computer behind local network, etc. with remote shell client side installed on slave machine, you can access from remote_shell host side like normal ssh process.
+The backend of remote_shell is a P2P framework upd_hole_punching (https://github.com/wangmarkqi/udp_hole_punching). The use scenarios include iot device with no fixed ip, home computer behind local network, etc. with remote shell client side installed on slave machine, you can access from remote_shell host side like normal ssh process.
 ![avatar](./data/demo.jpg)
 
 ## How to use:
