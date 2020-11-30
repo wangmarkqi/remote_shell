@@ -4,7 +4,6 @@ use std::io::prelude::*;
 use std::path::PathBuf;
 
 use super::order::Order;
-use async_std::task::block_on;
 use std::net::SocketAddr;
 use std::time::Duration;
 // std::fs::create_dir_all()
@@ -38,11 +37,11 @@ pub fn parse_input(input: &str) -> anyhow::Result<(String, Vec<String>)> {
 
 
 pub fn create_file_dir(file_path: &str) -> bool {
-    let fp = std::path::Path::new(file_path);
-    if let Some(p) = fp.parent() {
-        if let Ok(_) = std::fs::create_dir_all(p) {
-            return true;
-        }
-    }
+    let file_path = std::path::Path::new(file_path);
+    let dir = file_path.parent().unwrap();
+    if !dir.exists() {
+        std::fs::create_dir_all(dir).expect("create dir fail");
+        return true;
+    };
     false
 }

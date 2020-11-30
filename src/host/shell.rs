@@ -15,15 +15,18 @@ use crate::common::utils::*;
 use super::shell_process::ShellProcess;
 use crate::common::cmd::Cmd;
 
-pub async fn run_shell(swap_server: &str) -> anyhow::Result<()> {
+pub fn run_shell(swap_server: &str,db_path:&str) -> anyhow::Result<()> {
     let mut conf = hole::Conf::default();
     conf.swap_server = swap_server.to_string();
+    conf.db_path=db_path.to_string();
     conf.id = "".to_string();
     conf.set();
-    hole::init_udp().await?;
-    async_std::task::spawn(async {
-        hole::listen().await;
+
+    hole::init_udp();
+    std::thread::spawn(|| {
+        hole::listen();
     });
+
 
 
     enable_raw_mode()?;
@@ -103,7 +106,7 @@ pub async fn run_shell(swap_server: &str) -> anyhow::Result<()> {
                 print!("{}", ">>".white().bold());
                 stdout.flush()?;
             } else {
-                cmd.run().await;
+                cmd.run();
                 cmd.save()?;
             }
             line = String::new();

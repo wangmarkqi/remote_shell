@@ -598,3 +598,59 @@ where
 pwd
 ls
 send D://a.exe /home/b.exe
+use wq
+where
+ls
+pwd
+cd ..
+pwd
+cd ..
+ls
+pwd
+send D:/a.exe /home/c.exe
+pwd
+ls
+use wq
+where
+pwd
+ls
+pwd
+ls
+use wq
+ls
+pwd
+ls
+pwd
+use wq
+where
+pwd'
+pwd
+ls
+send D://a.exe /home/c.exe
+cccc
+\
+use wq
+where
+ls
+send D://a.exe /home/c.exe
+use wq
+where
+ls
+pwd
+send D://a.pdf /home/c.pdf
+ls
+cd /home
+ls
+rm c.exe
+ls
+sz D://a.exe /home/d.exe
+pwd
+send D://a.exe /home/e.exe
+pwd
+ls
+send D://a.xlsx /home/f.xlsx
+cd /home
+ls
+rec D://e.xlsx /home/f.xlsx
+ls
+rec D://wq.exe /home/e.exe

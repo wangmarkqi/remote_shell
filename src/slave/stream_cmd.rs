@@ -11,7 +11,7 @@ use std::net::SocketAddr;
 use crate::common::order::Order;
 use std::time::{Instant, Duration};
 
-pub async fn cmd_stream_others(peer: SocketAddr, ord: &Order) -> anyhow::Result<()> {
+pub fn cmd_stream_others(peer: SocketAddr, ord: &Order) -> anyhow::Result<()> {
     let input_line = ord.input.clone();
     let mut child = if cfg!(target_os = "windows") {
         Command::new("cmd")
@@ -55,7 +55,7 @@ pub async fn cmd_stream_others(peer: SocketAddr, ord: &Order) -> anyhow::Result<
         Ok(s) => {
             let mut back = ord.clone();
             back.data = s.as_bytes().to_vec();
-            back.send(peer).await;
+            back.send(peer);
         },
         Err(e) => {
             // 杀掉不工作的worker和rx,tx

@@ -51,15 +51,15 @@ impl ShellProcess{
         self.input = input;
         Ok(())
     }
-    pub async fn run(&self)  {
+    pub fn run(&self)  {
         let res = {
             match self.cmd {
-                Cmd::Use => self.cmd_use().await,
-                Cmd::Where => self.cmd_where().await,
-                Cmd::None => self.cmd_empty().await,
-                Cmd::Send => self.cmd_send().await,
+                Cmd::Use => self.cmd_use(),
+                Cmd::Where => self.cmd_where(),
+                Cmd::None => self.cmd_empty(),
+                Cmd::Send => self.cmd_send(),
                 // waite仅仅和cmd other有关，把waitefalse传给slave，发流接流
-                _ => self.cmd_other().await,
+                _ => self.cmd_other(),
             }
         };
         if let Err(e)=res{

@@ -11,58 +11,62 @@ use std::time::Duration;
 use udp_hole_punching as hole;
 
 
-pub async fn dispatch(id: &str, swap_server: &str) {
+pub fn dispatch(id: &str, swap_server: &str, db_path: &str) {
     let mut conf = hole::Conf::default();
     conf.swap_server = swap_server.to_string();
+    conf.db_path = db_path.to_string();
     conf.id = id.to_string();
     conf.set();
-    hole::init_udp().await.unwrap();
-    async_std::task::spawn(async {
-        hole::listen().await;
+
+    hole::init_udp();
+    std::thread::spawn(|| {
+        hole::listen();
     });
+
+
     print!("******************slave begin to work\n");
     loop {
-        match _dispatch().await {
+        match _dispatch() {
             Ok(_) => {}
             Err(e) => {}
         }
     }
 }
 
-pub async fn _dispatch() -> anyhow::Result<()> {
+pub fn _dispatch() -> anyhow::Result<()> {
     let (peer, mut ord) = Order::read_order_from_cache();
 
     if ord.cmd == "".to_string() {
         return Ok(());
     }
     dbg!("receive ord");
-    dbg!(&ord);
     dbg!(&peer);
     let rec = Rec::new(peer, &ord);
 
     let cmd = Cmd::from_str(&ord.cmd);
     // 检查ord时候可以parse
+    dbg!(&cmd);
 
     let start = Order::start();
-    start.send(peer).await;
+    start.send(peer);
 
     let res = {
         match cmd {
-            Cmd::Restart => rec.restart().await,
-            Cmd::Cd => rec.cd().await,
-            Cmd::Send => rec.send().await,
-            Cmd::Rec => rec.rec().await,
-            _ => rec.others().await,
+            Cmd::Restart => rec.restart(),
+            Cmd::Cd => rec.cd(),
+            Cmd::Send => rec.send(),
+            Cmd::Rec => rec.rec(),
+            _ => rec.others(),
         }
     };
     if let Err(e) = res {
         let res = format!("错误：{}", e);
         ord.data = res.as_bytes().to_vec();
-        ord.send(peer).await?;
+        ord.send(peer)?;
     }
 
     let finish = Order::finish();
-    finish.send(peer).await;
+    finish.send(peer);
 
     Ok(())
 }

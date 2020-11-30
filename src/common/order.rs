@@ -43,10 +43,9 @@ impl Order {
         (addr, ord)
     }
 
-    pub async fn send(&self, peer:SocketAddr) ->anyhow::Result<()>{
+    pub fn send(&self, peer:SocketAddr) ->anyhow::Result<()>{
         let encoded: Vec<u8> = bincode::serialize(self).unwrap();
-        dbg!(&self.data.len());
-        hole::send(&encoded, peer).await?;
+        hole::send(&encoded, peer);
         Ok(())
     }
 
