@@ -48,8 +48,9 @@ Clear Terminal.
 
 ###  press key Esc:
 Quit the shell.
-## The buildin function: 
-Besides standard commands,for example ls,pwd in linux or dir in win10, remote_shell provides building commands. 
+
+## The build_in function: 
+Besides standard commands,for example ls,pwd in linux or dir in win10, remote_shell provides following build_in commands. 
 ### use <slave_id>
 This command will specify the slave you want to control.You should run step3 on slave pc and config the slave id in the .env file. This salve_id (use arg) should be same with id in the .env file.
 
